@@ -15,5 +15,5 @@ SourceFiles = [
 
 # Build ...
 
-Program('core_tests',SourceFiles)
+Program('../../bin/core_tests',SourceFiles)
 

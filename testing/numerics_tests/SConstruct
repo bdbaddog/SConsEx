@@ -15,5 +15,5 @@ SourceFiles = [
 
 # Build ...
 
-Program('numerics_tests',SourceFiles)
+Program('../../bin/numerics_tests',SourceFiles)
 
