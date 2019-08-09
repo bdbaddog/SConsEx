@@ -1,1 +1,19 @@
 print("************************************* [Building SConsEx/testing/core_tests]")
+
+import os
+
+# Setup environment
+env = Environment()
+
+# Settings
+
+# Base source files
+
+SourceFiles = [
+   'main.cpp'
+]
+
+# Build ...
+
+Program('core_tests',SourceFiles)
+

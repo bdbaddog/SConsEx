@@ -7,13 +7,13 @@ env = Environment()
 
 # Settings
 
-# Ordered build ...
+# Base source files
 
 SourceFiles = [
    'string_funcs.cpp'
 ]
 
-
+# Platform dependent source files
 if env['PLATFORM'] == 'posix':
    SourceFiles.append('file_funcs_linux.cpp')
 else:

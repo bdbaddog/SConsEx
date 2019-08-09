@@ -1,11 +1,10 @@
 print("************************************* [Building SConsEx/testing]")
 
 # Ordered build ...
-Scripts = [
-   'core_tests/SConstruct',
-   'numerics_tests/SConstruct'
+SubDirs = [
+   'core_tests',
+   'numerics_tests'
 ]
 
-for script in Scripts:
-   SConscript( script )
-
+for subDir in SubDirs:
+    SConscript(os.path.join(subDir, 'SConscript'), exports = ['env'])

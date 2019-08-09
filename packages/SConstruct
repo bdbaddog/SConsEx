@@ -1,11 +1,4 @@
 print("************************************* [Building SConsEx/packages]")
 
-# Ordered build ...
-Scripts = [
-   'core/SConstruct',
-   'numerics/SConstruct'
-]
-
-for script in Scripts:
-   SConscript( script )
-
+env = Environment()
+SConscript('SConscript', exports = ['env'])

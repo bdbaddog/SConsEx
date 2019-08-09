@@ -2,19 +2,17 @@ print("************************************* [Building SconsEx]")
 
 import os
 
-# Setup environment
+# Setup environment/settings
 env = Environment()
 
-# Build settings
 debug_env   = env.Clone(CCFLAGS = '-g')
 release_env = env.Clone(CCFLAGS = '-O2')
 
 # Ordered build ...
-Scripts = [
-   'packages/SConstruct',
-   'testing/SConstruct'
+SubDirs = [
+   'packages',
+   'testing'
 ]
 
-for script in Scripts:
-   SConscript( script )
-
+for subDir in SubDirs:
+    SConscript(os.path.join(subDir, 'SConscript'), exports = ['env'])

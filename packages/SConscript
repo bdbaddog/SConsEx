@@ -1,0 +1,10 @@
+import os
+
+Import('env')
+subdirs = [
+   'core',
+   'numerics'
+]
+
+for subdir in subdirs:
+    SConscript(os.path.join(subdir, 'SConscript'), exports = ['env'])

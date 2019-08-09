@@ -2,12 +2,12 @@ print("************************************* [Building SConsEx/packages/numerics
 
 import os
 
-# Setup environment
-# Settings
-include = '../../packages'
-env = Environment(CPPPATH=include)
+# Setup environment/settings
 
-# Ordered build ...
+env = Environment()
+env['CPPPATH'] = ['../../packages']
+
+# Base source files
 
 SourceFiles = [
    'constants.cpp',
@@ -15,4 +15,5 @@ SourceFiles = [
 ]
 
 SharedLibrary('../../lib/SConsEx_numerics',SourceFiles)
+
 
