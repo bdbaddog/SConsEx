@@ -9,4 +9,5 @@ SourceFiles = [
    'linear_funcs.cpp'
 ]
 
+SharedLibrary('SConsEx_numerics',SourceFiles)
 
