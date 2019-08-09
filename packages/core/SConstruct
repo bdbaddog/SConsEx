@@ -1,3 +1,18 @@
+import os
+
 print("************************************* [Building SConsEx/packages/core]")
 
+env = Environment()
+
+SourceFiles = [
+   'string_funcs.cpp'
+]
+
+
+if env['PLATFORM'] == 'posix':
+   SourceFiles.append('file_funcs_linux.cpp')
+else:
+   SourceFiles.append('file_funcs_win.cpp')
+
+SharedLibrary('SConsEx_core',SourceFiles)
 

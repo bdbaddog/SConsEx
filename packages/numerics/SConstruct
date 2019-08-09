@@ -1,2 +1,12 @@
+import os
+
 print("************************************* [Building SConsEx/packages/numerics]")
+
+env = Environment()
+
+SourceFiles = [
+   'constants.cpp',
+   'linear_funcs.cpp'
+]
+
 
