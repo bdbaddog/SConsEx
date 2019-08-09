@@ -1,15 +1,18 @@
-import os
-
 print("************************************* [Building SConsEx/packages/numerics]")
 
-# Setup includes
+import os
+
+# Setup environment
+# Settings
 include = '../../packages'
 env = Environment(CPPPATH=include)
+
+# Ordered build ...
 
 SourceFiles = [
    'constants.cpp',
    'linear_funcs.cpp'
 ]
 
-SharedLibrary('SConsEx_numerics',SourceFiles)
+SharedLibrary('../../lib/SConsEx_numerics',SourceFiles)
 

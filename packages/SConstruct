@@ -1,4 +1,14 @@
 print("************************************* [Building SConsEx/packages]")
 
-SConscript( 'core/SConstruct' )
-SConscript( 'numerics/SConstruct' )
+import os
+Import('env')
+
+# Ordered build ...
+Scripts = [
+   'core/SConstruct',
+   'numerics/SConstruct'
+]
+
+for script in Scripts:
+   SConscript( script )
+

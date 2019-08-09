@@ -1,4 +1,20 @@
 print("************************************* [Building SconsEx]")
 
-SConscript( 'packages/SConstruct' )
-SConscript( 'testing/SConstruct' )
+import os
+
+# Setup environment
+env = Environment()
+
+# Build settings
+debug_env   = env.Clone(CCFLAGS = '-g')
+release_env = env.Clone(CCFLAGS = '-O2')
+
+# Ordered build ...
+Scripts = [
+   'packages/SConstruct',
+   'testing/SConstruct'
+]
+
+for script in Scripts:
+   SConscript( script )
+

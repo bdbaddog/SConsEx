@@ -1,8 +1,13 @@
-import os
-
 print("************************************* [Building SConsEx/packages/core]")
 
+import os
+
+# Setup environment
 env = Environment()
+
+# Settings
+
+# Ordered build ...
 
 SourceFiles = [
    'string_funcs.cpp'
