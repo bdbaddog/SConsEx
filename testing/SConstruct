@@ -1,0 +1,4 @@
+print("************************************* [Building SConsEx/testing]")
+
+SConscript( 'core_tests/SConstruct' )
+SConscript( 'numerics_tests/SConstruct' )

@@ -1,0 +1,4 @@
+print("************************************* [Building SConsEx/packages]")
+
+SConscript( 'core/SConstruct' )
+SConscript( 'numerics/SConstruct' )
