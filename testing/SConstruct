@@ -1,8 +1,5 @@
 print("************************************* [Building SConsEx/testing]")
 
-import os
-Import('env')
-
 # Ordered build ...
 Scripts = [
    'core_tests/SConstruct',
