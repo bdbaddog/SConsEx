@@ -2,7 +2,9 @@ import os
 
 print("************************************* [Building SConsEx/packages/numerics]")
 
-env = Environment()
+# Setup includes
+include = '../../packages'
+env = Environment(CPPPATH=include)
 
 SourceFiles = [
    'constants.cpp',
