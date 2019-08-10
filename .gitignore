@@ -1,4 +1,5 @@
 *.dblite
 lib
 bin
+*.o
 
