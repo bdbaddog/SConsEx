@@ -1,3 +1,7 @@
+import os
+
+Import('env')
+
 print("************************************* [Building SConsEx/testing]")
 
 # Ordered build ...

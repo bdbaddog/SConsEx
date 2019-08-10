@@ -1,0 +1,17 @@
+import os
+
+Import('env')
+print("************************************* [Building SConsEx/testing/numerics_tests]")
+
+# Settings
+
+# Base source files
+
+SourceFiles = [
+   'main.cpp'
+]
+
+# Build ...
+
+env.Program('#/bin/numerics_tests',SourceFiles, LIBS=['SConsEx_numerics',])
+

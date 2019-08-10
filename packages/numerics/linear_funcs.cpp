@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-double numerics::compute_mapping( double a0,double a1, double b0,double b1,   double& slope,double& intercept )
+void numerics::compute_mapping( double a0,double a1, double b0,double b1,   double& slope,double& intercept )
 {
 	if ( ( a1-a0 )==0 )
 	{

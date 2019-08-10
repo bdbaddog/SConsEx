@@ -1,4 +1,0 @@
-print("************************************* [Building SConsEx/packages]")
-
-env = Environment()
-SConscript('SConscript', exports = ['env'])

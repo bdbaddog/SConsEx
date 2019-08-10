@@ -1,9 +1,6 @@
 print("************************************* [Building SConsEx/packages/core]")
-
+Import('env')
 import os
-
-# Setup environment
-env = Environment()
 
 # Settings
 
@@ -19,5 +16,5 @@ if env['PLATFORM'] == 'posix':
 else:
    SourceFiles.append('file_funcs_win.cpp')
 
-SharedLibrary('SConsEx_core',SourceFiles)
+env.SharedLibrary('#/lib/SConsEx_core',SourceFiles, LIBS=['SConsEx_numerics'])
 

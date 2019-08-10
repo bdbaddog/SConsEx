@@ -1,6 +1,6 @@
 #include "string_funcs.h"
 
-std::string upper_case( std::string& s )
+std::string core::upper_case( std::string& s )
 {
 	std::string ret = s;
 	std::string::iterator it= ret.begin();
@@ -15,7 +15,7 @@ std::string upper_case( std::string& s )
 
 }// end upper_case ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-std::string lower_case( std::string& s )
+std::string core::lower_case( std::string& s )
 {
 	std::string ret = s;
 	std::string::iterator it = ret.begin();
